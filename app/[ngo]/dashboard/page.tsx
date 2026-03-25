@@ -1,10 +1,7 @@
 import { redirect } from 'next/navigation'
 
-export default async function ScopedDashboardPage({
-  params,
-}: {
-  params: Promise<{ ngo: string }>
-}) {
-  await params
+export const dynamic = 'force-dynamic'
+
+export default function ScopedDashboardPage() {
   redirect('/dashboard')
 }
