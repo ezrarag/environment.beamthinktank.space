@@ -1,23 +1,9 @@
 import { NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { environmentProjects } from '@/lib/environment/content'
 
 export async function GET() {
-  try {
-    const { data, error } = await supabase
-      .from('projects')
-      .select('*')
-      .order('created_at', { ascending: false })
-
-    if (error) {
-      throw error
-    }
-
-    return NextResponse.json({ projects: data })
-  } catch (error) {
-    console.error('API error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
-  }
+  return NextResponse.json({
+    projects: environmentProjects,
+    source: 'static scaffold',
+  })
 }

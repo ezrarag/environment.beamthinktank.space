@@ -1,42 +1,24 @@
-import { createClient } from '@supabase/supabase-js'
+export const supabase = null
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co'
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key'
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
-
-// Database types for TypeScript
 export interface Project {
-  id: number
+  id: string | number
   title: string
   description: string
-  location: string
-  target_amount: number
-  current_amount: number
-  participants: number
-  image_url: string
-  category: string
-  status: 'active' | 'completed' | 'fundraising'
-  created_at: string
-  updated_at: string
+  location?: string
+  status?: 'active' | 'completed' | 'fundraising'
 }
 
 export interface Donation {
-  id: number
+  id: string | number
   amount: number
-  project_id?: number
-  community_node?: string
   donor_name?: string
   donor_email?: string
-  stripe_payment_intent_id: string
-  created_at: string
 }
 
 export interface CommunityNode {
-  id: number
+  id: string | number
   name: string
-  participants: number
-  total_raised: number
-  description: string
-  created_at: string
+  participants?: number
+  total_raised?: number
+  description?: string
 }
