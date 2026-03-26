@@ -8,19 +8,21 @@ import { environmentPartnerLogos, environmentTracks } from '@/lib/environment/co
 export default function EnvironmentHomePage() {
   return (
     <main>
-      <div className="absolute left-0 right-0 top-0 z-20">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
-          <Link href="/" className="min-w-0">
-            <p className="text-xs uppercase tracking-[0.22em] text-environment-water">BEAM NGO</p>
-            <p className="text-2xl text-white">Environment</p>
+      <div className="absolute left-0 right-0 top-0 z-30 px-4 pt-4 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 rounded-[28px] border border-white/12 bg-[#0a161b]/72 px-4 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl lg:grid-cols-[minmax(220px,1fr)_auto_minmax(220px,1fr)]">
+          <Link href="/" className="min-w-0 leading-none">
+            <p className="text-[11px] uppercase tracking-[0.28em] text-environment-water">BEAM NGO</p>
+            <p className="mt-1 text-[2rem] leading-[0.88] text-white">Environment</p>
           </Link>
-          <div className="hidden items-center gap-6 text-sm text-white/72 md:flex">
-            <a href="#problem">Problem</a>
-            <a href="#solution">Solution</a>
-            <a href="#partners">Partners</a>
-            <a href="#tracks">Tracks</a>
+          <div className="hidden items-center justify-center gap-8 text-sm text-white/72 lg:flex">
+            <a className="transition hover:text-white" href="#problem">Problem</a>
+            <a className="transition hover:text-white" href="#solution">Solution</a>
+            <a className="transition hover:text-white" href="#partners">Partners</a>
+            <a className="transition hover:text-white" href="#tracks">Tracks</a>
           </div>
-          <UserMenu />
+          <div className="justify-self-end">
+            <UserMenu />
+          </div>
         </div>
       </div>
 

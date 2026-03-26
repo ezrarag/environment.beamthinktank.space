@@ -1,5 +1,6 @@
 import type { NGOConfig } from '@/lib/types/portal'
 import { environmentProjects, environmentSlides } from '@/lib/environment/content'
+import { buildEnvironmentParticipantHandoffUrl } from '@/lib/environment/handoff'
 
 export const environmentConfig: NGOConfig = {
   id: 'environment',
@@ -25,7 +26,7 @@ export const environmentConfig: NGOConfig = {
   firestoreCollection: 'environmentClients',
   ragAllowlistCollection: 'environmentRagAllowlist',
   beamCoinEnabled: false,
-  rootParticipantApplicationUrl: 'https://beamthinktank.space/participate?ngo=environment',
+  rootParticipantApplicationUrl: buildEnvironmentParticipantHandoffUrl(),
   rootClientRegistrationUrl: 'https://beamthinktank.space/register/client?ngo=environment',
   homeSlides: environmentSlides,
   recordingSlides: environmentSlides,

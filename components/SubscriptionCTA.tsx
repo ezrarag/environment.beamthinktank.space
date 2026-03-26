@@ -14,6 +14,9 @@ export default function SubscriptionCTA({ applicationUrl, clientUrl }: Subscript
       <p className="mt-4 max-w-3xl text-base leading-7 text-white/72">
         Environment does not own registration. Intake stays centralized at `beamthinktank.space`, then approved users are redirected back here with shared BEAM auth.
       </p>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-white/58">
+        Participant onboarding is routed through the BEAM Home handoff flow so BEAM can persist the NGO association on the root platform before sending the user to their participant dashboard.
+      </p>
       <div className="mt-6 flex flex-wrap gap-3">
         <Link href={applicationUrl} className="btn-primary">
           Apply as Participant

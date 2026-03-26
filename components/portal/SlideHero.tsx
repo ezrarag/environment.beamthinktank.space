@@ -30,9 +30,8 @@ export default function SlideHero({ slides, ngo, scopedRoutes = false }: SlideHe
       />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(61,183,198,0.24),transparent_25%),radial-gradient(circle_at_80%_24%,rgba(157,209,124,0.18),transparent_24%)]" />
 
-      <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-between px-4 py-8 sm:px-6 lg:px-8">
-        <div className="flex items-start justify-between gap-4">
-          <div className="eyebrow">BEAM Environment</div>
+      <div className="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-between px-4 pb-8 pt-28 sm:px-6 sm:pt-32 lg:px-8 lg:pt-36">
+        <div className="flex justify-end">
           <div className="flex items-center gap-2">
             <button type="button" onClick={prevIndex} className="rounded-full border border-white/20 bg-black/25 p-3 text-white transition hover:border-environment-water">
               <ChevronLeft className="h-4 w-4" />
@@ -48,7 +47,7 @@ export default function SlideHero({ slides, ngo, scopedRoutes = false }: SlideHe
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
-          className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]"
+          className="grid gap-10 pt-10 lg:grid-cols-[1.2fr_0.8fr] lg:pt-12"
         >
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.2em] text-environment-moss">Compliance made clear. Water made safe.</p>
